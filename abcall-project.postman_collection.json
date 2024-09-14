@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "954a5443-554d-4d27-a5e7-9cb04322813b",
+		"name": "abcall-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1347256"
+	},
+	"item": [
+		{
+			"name": "abcall-bff",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_BFF_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_BFF_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
