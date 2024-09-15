@@ -27,6 +27,28 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "abcall-payment-api",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_PAYMENT_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
