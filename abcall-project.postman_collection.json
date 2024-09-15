@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "954a5443-554d-4d27-a5e7-9cb04322813b",
+		"_postman_id": "de0c8b23-d5a5-45eb-9c46-a942637b8cbf",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "1347256"
+		"_exporter_id": "4338146"
 	},
 	"item": [
 		{
@@ -21,6 +21,24 @@
 							],
 							"path": [
 								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "invoices by customer id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/63d85da4-e3d9-4e76-9821-e6a3ca626962",
+							"host": [
+								"{{ABCALL_BFF_BASE_URL}}"
+							],
+							"path": [
+								"invoices",
+								"63d85da4-e3d9-4e76-9821-e6a3ca626962"
 							]
 						}
 					},
