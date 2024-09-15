@@ -47,6 +47,24 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "invoices by customer id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/63d85da4-e3d9-4e76-9821-e6a3ca626962",
+							"host": [
+								"{{ABCALL_PAYMENT_BASE_URL}}"
+							],
+							"path": [
+								"invoices",
+								"63d85da4-e3d9-4e76-9821-e6a3ca626962"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
