@@ -148,52 +148,7 @@
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "New Request",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{ABCALL_REPORTS_BASE_URL}}/invoice/G234324214",
-									"host": [
-										"{{ABCALL_REPORTS_BASE_URL}}"
-									],
-									"path": [
-										"invoice",
-										"G234324214"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": null,
-							"header": [
-								{
-									"key": "Server",
-									"value": "Werkzeug/3.0.4 Python/3.8.6"
-								},
-								{
-									"key": "Date",
-									"value": "Sat, 21 Sep 2024 02:21:22 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/octet-stream"
-								},
-								{
-									"key": "Content-Length",
-									"value": "1654"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								}
-							],
-							"cookie": [],
-							"body": null
-						}
-					]
+					"response": []
 				}
 			]
 		}
