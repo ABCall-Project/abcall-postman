@@ -43,6 +43,24 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "download invoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_BFF_BASE_URL}}/invoice/I202409220326",
+							"host": [
+								"{{ABCALL_BFF_BASE_URL}}"
+							],
+							"path": [
+								"invoice",
+								"I202409220326"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -72,13 +90,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/63d85da4-e3d9-4e76-9821-e6a3ca626962",
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/2f3365a3-3aeb-4689-bbcf-9fc9585e22e8",
 							"host": [
 								"{{ABCALL_PAYMENT_BASE_URL}}"
 							],
 							"path": [
 								"invoices",
-								"63d85da4-e3d9-4e76-9821-e6a3ca626962"
+								"2f3365a3-3aeb-4689-bbcf-9fc9585e22e8"
 							]
 						}
 					},
@@ -138,13 +156,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_REPORTS_BASE_URL}}/invoice/G234324214",
+							"raw": "{{ABCALL_REPORTS_BASE_URL}}/invoice/I202409220326",
 							"host": [
 								"{{ABCALL_REPORTS_BASE_URL}}"
 							],
 							"path": [
 								"invoice",
-								"G234324214"
+								"I202409220326"
 							]
 						}
 					},
