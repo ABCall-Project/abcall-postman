@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "de0c8b23-d5a5-45eb-9c46-a942637b8cbf",
+		"_postman_id": "ffb2588c-b4d4-4f3e-9411-247fb6461a86",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4338146"
+		"_exporter_id": "1347256"
 	},
 	"item": [
 		{
@@ -43,6 +43,24 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "download invoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_BFF_BASE_URL}}/invoice/I202409220326",
+							"host": [
+								"{{ABCALL_BFF_BASE_URL}}"
+							],
+							"path": [
+								"invoice",
+								"I202409220326"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -72,13 +90,101 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/63d85da4-e3d9-4e76-9821-e6a3ca626962",
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/2f3365a3-3aeb-4689-bbcf-9fc9585e22e8",
 							"host": [
 								"{{ABCALL_PAYMENT_BASE_URL}}"
 							],
 							"path": [
 								"invoices",
-								"63d85da4-e3d9-4e76-9821-e6a3ca626962"
+								"2f3365a3-3aeb-4689-bbcf-9fc9585e22e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-reports-api",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_REPORTS_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_REPORTS_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"944f4868-02c7-4bcd-b0b2-e85d5145855f\",\n    \"customer_id\":\"944f4868-02c7-4bcd-b0b2-e85d5145855f\",\n    \"invoice_id\":\"G234324214\",\n    \"payment_id\":\"944f4868-02c7-4bcd-b0b2-e85d5145855f\",\n    \"amount\":10000,\n    \"tax\":10,\n    \"total_amount\":100010,\n    \"subscription\":\"\",\n    \"subscription_id\":\"944f4868-02c7-4bcd-b0b2-e85d5145855f\",\n    \"status\":\"paid\",\n    \"created_at\":\"2024-09-18T14:30:15\",\n    \"updated_at\":\"2024-09-18T14:30:15\",\n    \"generation_date\":\"2024-09-18T14:30:15\",\n    \"period\":\"2024-09-18T14:30:15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ABCALL_REPORTS_BASE_URL}}/invoice",
+							"host": [
+								"{{ABCALL_REPORTS_BASE_URL}}"
+							],
+							"path": [
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download invoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_REPORTS_BASE_URL}}/invoice/I202409220326",
+							"host": [
+								"{{ABCALL_REPORTS_BASE_URL}}"
+							],
+							"path": [
+								"invoice",
+								"I202409220326"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-websocket-service",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_WEBSOCKET_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_WEBSOCKET_BASE_URL}}"
+							],
+							"path": [
+								"health"
 							]
 						}
 					},
