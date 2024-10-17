@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ffb2588c-b4d4-4f3e-9411-247fb6461a86",
+		"_postman_id": "e713c209-7e0e-405f-b461-b38ed3808e98",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "1347256"
+		"_exporter_id": "4338146"
 	},
 	"item": [
 		{
@@ -182,6 +182,140 @@
 							"raw": "{{ABCALL_WEBSOCKET_BASE_URL}}/health",
 							"host": [
 								"{{ABCALL_WEBSOCKET_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-customer",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_CUSTOMER_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_CUSTOMER_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-issue",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-notification",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_NOTIFICATION_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_NOTIFICATION_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-auth-api",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_AUTH_BASE_URL}}/health",
+							"host": [
+								"{{ABCALL_AUTH_BASE_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsersByCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_AUTH_BASE_URL}}/users/getUsersByCustomer?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+							"host": [
+								"{{ABCALL_AUTH_BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"getUsersByCustomer"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "abcall-api",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_API_URL}}/health",
+							"host": [
+								"{{ABCALL_API_URL}}"
 							],
 							"path": [
 								"health"
