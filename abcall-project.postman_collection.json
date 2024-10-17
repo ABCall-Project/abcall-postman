@@ -301,6 +301,38 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getIssuesByCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesByCustomer?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&year=2024&month=10",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"issue",
+								"getIssuesByCustomer"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								},
+								{
+									"key": "year",
+									"value": "2024"
+								},
+								{
+									"key": "month",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
