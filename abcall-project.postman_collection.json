@@ -101,6 +101,24 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GenerateInvoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/GenerateInvoice/generateInvoices",
+							"host": [
+								"{{ABCALL_PAYMENT_BASE_URL}}"
+							],
+							"path": [
+								"GenerateInvoice",
+								"generateInvoices"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -211,6 +229,30 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "get_issue_fee_by_customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_CUSTOMER_BASE_URL}}/customer/get_issue_fee_by_customer?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+							"host": [
+								"{{ABCALL_CUSTOMER_BASE_URL}}"
+							],
+							"path": [
+								"customer",
+								"get_issue_fee_by_customer"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -229,6 +271,38 @@
 							],
 							"path": [
 								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getIssuesByCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesByCustomer?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&year=2024&month=10",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"issue",
+								"getIssuesByCustomer"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								},
+								{
+									"key": "year",
+									"value": "2024"
+								},
+								{
+									"key": "month",
+									"value": "10"
+								}
 							]
 						}
 					},
@@ -296,38 +370,6 @@
 								{
 									"key": "customer_id",
 									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getIssuesByCustomer",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesByCustomer?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&year=2024&month=10",
-							"host": [
-								"{{ABCALL_ISSUE_BASE_URL}}"
-							],
-							"path": [
-								"issue",
-								"getIssuesByCustomer"
-							],
-							"query": [
-								{
-									"key": "customer_id",
-									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
-								},
-								{
-									"key": "year",
-									"value": "2024"
-								},
-								{
-									"key": "month",
-									"value": "10"
 								}
 							]
 						}
