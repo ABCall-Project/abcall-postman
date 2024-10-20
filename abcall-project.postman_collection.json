@@ -84,7 +84,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=4350bef1-9c9f-4fbc-94c8-bf682a0a3ece",
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=71c83b0c-c307-4e70-8743-e09044e06bd0",
 									"host": [
 										"{{ABCALL_BFF_BASE_URL}}"
 									],
@@ -95,7 +95,7 @@
 									"query": [
 										{
 											"key": "invoice_id",
-											"value": "4350bef1-9c9f-4fbc-94c8-bf682a0a3ece"
+											"value": "71c83b0c-c307-4e70-8743-e09044e06bd0"
 										}
 									]
 								}
@@ -215,7 +215,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=4350bef1-9c9f-4fbc-94c8-bf682a0a3ece",
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=71c83b0c-c307-4e70-8743-e09044e06bd0",
 							"host": [
 								"{{ABCALL_PAYMENT_BASE_URL}}"
 							],
@@ -226,7 +226,7 @@
 							"query": [
 								{
 									"key": "invoice_id",
-									"value": "4350bef1-9c9f-4fbc-94c8-bf682a0a3ece"
+									"value": "71c83b0c-c307-4e70-8743-e09044e06bd0"
 								}
 							]
 						}
@@ -418,6 +418,14 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
