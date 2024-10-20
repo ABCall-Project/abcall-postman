@@ -119,6 +119,54 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getTotalCostPending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getTotalCostPending?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+							"host": [
+								"{{ABCALL_PAYMENT_BASE_URL}}"
+							],
+							"path": [
+								"invoices",
+								"getTotalCostPending"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDetailsInvoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=4350bef1-9c9f-4fbc-94c8-bf682a0a3ece",
+							"host": [
+								"{{ABCALL_PAYMENT_BASE_URL}}"
+							],
+							"path": [
+								"invoices",
+								"getListDetailsInvoiceById"
+							],
+							"query": [
+								{
+									"key": "invoice_id",
+									"value": "4350bef1-9c9f-4fbc-94c8-bf682a0a3ece"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
