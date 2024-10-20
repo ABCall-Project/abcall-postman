@@ -10,6 +10,101 @@
 			"name": "abcall-bff",
 			"item": [
 				{
+					"name": "payment",
+					"item": [
+						{
+							"name": "invoices by customer id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getInvoices?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"invoices",
+										"getInvoices"
+									],
+									"query": [
+										{
+											"key": "customer_id",
+											"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "download invoice",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoice/I202410190327",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"invoice",
+										"I202410190327"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getTotalCostPending",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getTotalCostPending?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"invoices",
+										"getTotalCostPending"
+									],
+									"query": [
+										{
+											"key": "customer_id",
+											"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getListDetailsInvoiceById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=4350bef1-9c9f-4fbc-94c8-bf682a0a3ece",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"invoices",
+										"getListDetailsInvoiceById"
+									],
+									"query": [
+										{
+											"key": "invoice_id",
+											"value": "4350bef1-9c9f-4fbc-94c8-bf682a0a3ece"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "health",
 					"request": {
 						"method": "GET",
@@ -21,42 +116,6 @@
 							],
 							"path": [
 								"health"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "invoices by customer id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/63d85da4-e3d9-4e76-9821-e6a3ca626962",
-							"host": [
-								"{{ABCALL_BFF_BASE_URL}}"
-							],
-							"path": [
-								"invoices",
-								"63d85da4-e3d9-4e76-9821-e6a3ca626962"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "download invoice",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{ABCALL_BFF_BASE_URL}}/invoice/I202409220326",
-							"host": [
-								"{{ABCALL_BFF_BASE_URL}}"
-							],
-							"path": [
-								"invoice",
-								"I202409220326"
 							]
 						}
 					},
@@ -90,13 +149,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/2f3365a3-3aeb-4689-bbcf-9fc9585e22e8",
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getInvoices?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
 							"host": [
 								"{{ABCALL_PAYMENT_BASE_URL}}"
 							],
 							"path": [
 								"invoices",
-								"2f3365a3-3aeb-4689-bbcf-9fc9585e22e8"
+								"getInvoices"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								}
 							]
 						}
 					},
