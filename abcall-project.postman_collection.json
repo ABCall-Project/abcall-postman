@@ -84,7 +84,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=71c83b0c-c307-4e70-8743-e09044e06bd0",
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=cc2a0f00-333d-4555-a8ad-b8164a240f52",
 									"host": [
 										"{{ABCALL_BFF_BASE_URL}}"
 									],
@@ -95,7 +95,80 @@
 									"query": [
 										{
 											"key": "invoice_id",
-											"value": "71c83b0c-c307-4e70-8743-e09044e06bd0"
+											"value": "cc2a0f00-333d-4555-a8ad-b8164a240f52"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Issues",
+					"item": [
+						{
+							"name": "getIAResponse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getIAResponse?question=hola",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"invoices",
+										"getIAResponse"
+									],
+									"query": [
+										{
+											"key": "question",
+											"value": "hola"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getIssuesDashboard",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/getIssuesDasboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"issues",
+										"getIssuesDasboard"
+									],
+									"query": [
+										{
+											"key": "customer_id",
+											"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+										},
+										{
+											"key": "status",
+											"value": "791353c6-3899-4d35-bcd9-af8775e240bf",
+											"disabled": true
+										},
+										{
+											"key": "channel_plan_id",
+											"value": "8321f202-e7dc-441c-8efb-7e3bb3507f0b",
+											"disabled": true
+										},
+										{
+											"key": "created_at",
+											"value": "2024-10-18",
+											"disabled": true
+										},
+										{
+											"key": "closed_at",
+											"value": "2024-10-20",
+											"disabled": true
 										}
 									]
 								}
@@ -215,7 +288,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=71c83b0c-c307-4e70-8743-e09044e06bd0",
+							"raw": "{{ABCALL_PAYMENT_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=d813e5ec-27b2-4416-bd43-20e86f04b74a",
 							"host": [
 								"{{ABCALL_PAYMENT_BASE_URL}}"
 							],
@@ -226,7 +299,7 @@
 							"query": [
 								{
 									"key": "invoice_id",
-									"value": "71c83b0c-c307-4e70-8743-e09044e06bd0"
+									"value": "d813e5ec-27b2-4416-bd43-20e86f04b74a"
 								}
 							]
 						}
@@ -422,10 +495,54 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "getIAResponse",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIAResponse?question=donde nació JESUS",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"issue",
+								"getIAResponse"
+							],
+							"query": [
+								{
+									"key": "question",
+									"value": "donde nació JESUS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesDasboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&status=",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesDasboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&status=",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"issue",
+								"getIssuesDasboard"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								},
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				}
