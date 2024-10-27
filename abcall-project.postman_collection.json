@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "e713c209-7e0e-405f-b461-b38ed3808e98",
+		"_postman_id": "e84c7bd0-8a00-4981-aec0-a723942606d9",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4338146"
+		"_exporter_id": "1347256"
 	},
 	"item": [
 		{
@@ -540,6 +540,35 @@
 								{
 									"key": "status",
 									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findissue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issues/find/f7d0b546-94cb-468f-acf9-a3f287ba1b77?page=1&limit=5",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"issues",
+								"find",
+								"f7d0b546-94cb-468f-acf9-a3f287ba1b77"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
 								}
 							]
 						}
