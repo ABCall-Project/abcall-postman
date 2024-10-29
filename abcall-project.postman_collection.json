@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "e84c7bd0-8a00-4981-aec0-a723942606d9",
+		"_postman_id": "15ace949-35c9-42a8-820e-628b17dbd5f1",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "1347256"
+		"_exporter_id": "4338146"
 	},
 	"item": [
 		{
@@ -84,7 +84,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=cc2a0f00-333d-4555-a8ad-b8164a240f52",
+									"raw": "{{ABCALL_BFF_BASE_URL}}/invoices/getListDetailsInvoiceById?invoice_id=71c83b0c-c307-4e70-8743-e09044e06bd0",
 									"host": [
 										"{{ABCALL_BFF_BASE_URL}}"
 									],
@@ -95,7 +95,7 @@
 									"query": [
 										{
 											"key": "invoice_id",
-											"value": "cc2a0f00-333d-4555-a8ad-b8164a240f52"
+											"value": "71c83b0c-c307-4e70-8743-e09044e06bd0"
 										}
 									]
 								}
@@ -169,6 +169,30 @@
 											"key": "closed_at",
 											"value": "2024-10-20",
 											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getIAPredictiveAnswer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/getIAPredictiveAnswer?user_id=67526d60-0a0d-4c1e-bc89-c53ebda5d4da",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"issues",
+										"getIAPredictiveAnswer"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "67526d60-0a0d-4c1e-bc89-c53ebda5d4da"
 										}
 									]
 								}
@@ -519,7 +543,7 @@
 					"response": []
 				},
 				{
-					"name": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesDasboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&status=",
+					"name": "getIssuesDasboard",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -569,6 +593,30 @@
 								{
 									"key": "limit",
 									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getIAPredictiveAnswer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIAPredictiveAnswer?user_id=67526d60-0a0d-4c1e-bc89-c53ebda5d4da",
+							"host": [
+								"{{ABCALL_ISSUE_BASE_URL}}"
+							],
+							"path": [
+								"issue",
+								"getIAPredictiveAnswer"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "67526d60-0a0d-4c1e-bc89-c53ebda5d4da"
 								}
 							]
 						}
