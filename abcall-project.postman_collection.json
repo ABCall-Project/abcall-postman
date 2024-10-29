@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "15ace949-35c9-42a8-820e-628b17dbd5f1",
+		"_postman_id": "3743e7be-0d4d-4256-9b29-8e9ce31a033b",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "4338146"
+		"_exporter_id": "1347256"
 	},
 	"item": [
 		{
@@ -137,13 +137,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/getIssuesDasboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/getIssuesDashboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
 									"host": [
 										"{{ABCALL_BFF_BASE_URL}}"
 									],
 									"path": [
 										"issues",
-										"getIssuesDasboard"
+										"getIssuesDashboard"
 									],
 									"query": [
 										{
@@ -193,6 +193,34 @@
 										{
 											"key": "user_id",
 											"value": "67526d60-0a0d-4c1e-bc89-c53ebda5d4da"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/find?user_id=f7d0b546-94cb-468f-acf9-a3f287ba1b77?page=1&limit=5",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"issues",
+										"find"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "f7d0b546-94cb-468f-acf9-a3f287ba1b77?page=1"
+										},
+										{
+											"key": "limit",
+											"value": "5"
 										}
 									]
 								}
@@ -543,18 +571,18 @@
 					"response": []
 				},
 				{
-					"name": "getIssuesDasboard",
+					"name": "getIssuesDashboard",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesDasboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&status=",
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIssuesDashboard?customer_id=845eb227-5356-4169-9799-95a97ec5ce33&status=",
 							"host": [
 								"{{ABCALL_ISSUE_BASE_URL}}"
 							],
 							"path": [
 								"issue",
-								"getIssuesDasboard"
+								"getIssuesDashboard"
 							],
 							"query": [
 								{
