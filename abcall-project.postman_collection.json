@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ada02ae4-9a64-4a6f-bc5d-09b54402edf6",
+		"_postman_id": "dc8a47b5-e150-4534-9e57-7a26f2a80956",
 		"name": "abcall-project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "1347256"
+		"_exporter_id": "4338146"
 	},
 	"item": [
 		{
@@ -181,7 +181,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/getIAPredictiveAnswer?user_id=67526d60-0a0d-4c1e-bc89-c53ebda5d4da",
+									"raw": "{{ABCALL_BFF_BASE_URL}}/issues/getIAPredictiveAnswer?user_id=090b9b2f-c79c-41c1-944b-9d57cca4d582",
 									"host": [
 										"{{ABCALL_BFF_BASE_URL}}"
 									],
@@ -192,7 +192,7 @@
 									"query": [
 										{
 											"key": "user_id",
-											"value": "67526d60-0a0d-4c1e-bc89-c53ebda5d4da"
+											"value": "090b9b2f-c79c-41c1-944b-9d57cca4d582"
 										}
 									]
 								}
@@ -495,6 +495,54 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getCustomerById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_CUSTOMER_BASE_URL}}/customer/getCustomerById?customer_id=845eb227-5356-4169-9799-95a97ec5ce33",
+							"host": [
+								"{{ABCALL_CUSTOMER_BASE_URL}}"
+							],
+							"path": [
+								"customer",
+								"getCustomerById"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlanById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_CUSTOMER_BASE_URL}}/customer/getPlanById?plan_id=845eb227-5356-4169-9799-95a97ec5ce33",
+							"host": [
+								"{{ABCALL_CUSTOMER_BASE_URL}}"
+							],
+							"path": [
+								"customer",
+								"getPlanById"
+							],
+							"query": [
+								{
+									"key": "plan_id",
+									"value": "845eb227-5356-4169-9799-95a97ec5ce33"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -637,7 +685,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIAPredictiveAnswer?user_id=67526d60-0a0d-4c1e-bc89-c53ebda5d4da",
+							"raw": "{{ABCALL_ISSUE_BASE_URL}}/issue/getIAPredictiveAnswer?user_id=090b9b2f-c79c-41c1-944b-9d57cca4d582",
 							"host": [
 								"{{ABCALL_ISSUE_BASE_URL}}"
 							],
@@ -648,7 +696,7 @@
 							"query": [
 								{
 									"key": "user_id",
-									"value": "67526d60-0a0d-4c1e-bc89-c53ebda5d4da"
+									"value": "090b9b2f-c79c-41c1-944b-9d57cca4d582"
 								}
 							]
 						}
@@ -722,6 +770,38 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getCompanyByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ABCALL_AUTH_BASE_URL}}/users/getCompanyByUser?user_id=090b9b2f-c79c-41c1-944b-9d57cca4d582",
+							"host": [
+								"{{ABCALL_AUTH_BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"getCompanyByUser"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "090b9b2f-c79c-41c1-944b-9d57cca4d582"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByCredentials",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
@@ -740,6 +820,53 @@
 							],
 							"path": [
 								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "openai",
+			"item": [
+				{
+					"name": " https://api.openai.com/v1/chat/completions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\":\"gpt-4o\",\n    \"messages\":[\n        {\n            \"role\":\"user\",\n            \"content\":\"tu eres un servicio de analítica predictiva de abcall, te voy hablar un poco de abcall: es una compañía de servicio de soporte que recibe incidentes por diferentes canales, la idea es que te pasen los datos del cliente como los nombres, telefono correo, direccion fecha de nacimiento y el plan que está usando, que puede ser empresario, emprendedor o empresario plus siendo el más costoso el empresario plus y el mas económico el emprendedor. ABCall es una empresa dedicada a la tercerización de servicios de atención al cliente.El objetivo de ABCall es posicionarse como un jugador principal en el segmento de las pequeñas y medianas empresas que no cuentan con la infraestructura necesaria para sostener la operación de un centro de servicio al cliente. ABCall busca ofrecer un servicio novedoso de manejo de llamadas de entrada y de salida. Lo anterior, complementado con un servicio de automatización de procesos, integración ágil con sistemas de información, servicios adicionales de aprendizaje de máquina e inteligencia artificial generativa, así como servicios basados en web 3.0 (blockchain). ABCall está direccionada a diferentes grupos de clientes : En primer lugar, el servicio emprendedor es ofrecido a las empresas que desean ofrecer servicios de atención telefónica a sus clientes o interesados. En este caso, las empresas envían información de su base de clientes y el portafolio de productos y servicios a ABCall. Para este segmento, ABCall ofrece el servicio de registro de PQRs. Los usuarios de un cliente se comunican a un número telefónico que es atendido por agentes de ABCall. Un agente recibe la llamada, valida la información del cliente y los datos básicos del incidente. El agente busca, en una base de conocimientos de la empresa, problemas similares y soluciones conocidas a dicho problema. En caso de solucionar el incidente este se cierra sin novedad. Si no es posible solucionarlo el incidente queda abierto y se inicia el proceso de escalamiento de manera automatizada. Los clientes de ABCall tienen acceso a la aplicación para definir los flujos que se deben seguir al interior de su empresa para solucionar un problema, así como los tiempos límites de solución en cada paso antes de realizar el escalamiento. El servicio Empresario está ofrecido al segundo segmento de clientes, los cuales tienen la posibilidad de ofrecer más canales de comunicación a sus usuarios. En primer lugar, la línea telefónica de atención al cliente, en segundo lugar, un chatbot, en tercer lugar, una app móvil y en cuarto lugar un correo electrónico de soporte. En este segmento los incidentes se reciben por agentes de servicio a nivel telefónico y el proceso funciona como en el plan Emprendedor. El canal de atención por correo electrónico es atendido igualmente por agentes que revisan el contenido del correo, y crean los incidentes para solucionar el problema. Los clientes en este segmento tendrán adicionalmente la posibilidad de utilizar el servicio de llamadas de salida. Este servicio permite ofrecer llamadas de telemercadeo, encuestas, y validación de satisfacción del cliente. En este servicio se le ofrece a los clientes, un tablero de control para que analicen el comportamiento de sus productos, de las llamadas, de los clientes y sus peticiones y quejas, así como de los tiempos de resolución de incidentes e indicadores de gestión dentro de la empresa. El tercer tipo de servicio, Empresario Plus, ofrece todos los canales de atención del servicio Empresario pero con la capacidad de utilizar servicios de aprendizaje de máquina e inteligencia artificial. En este sentido, cuando se reciba por cualquier canal una PQR, esta será analizada automáticamente y con la ayuda de un modelo de analítica predictiva, se busca determinar niveles de riesgo asociados a los incidentes. Por ejemplo, en la llamada telefónica se analiza la conversación con el cliente, y se le propone en al gestor que atiende la llamada posibles respuestas al cliente, ofertas que puede realizar o incentivos a utilizar para, por ejemplo, evitar la fuga del cliente. Este mecanismo se utiliza también con los mensajes recibidos por correo o en la conversación con el cliente vía el chatbot. Todos los textos son analizados en tiempo real y las respuestas apoyadas por modelos analíticos y de generación automática. ABCall ofrece el servicio de los modelos analíticos en algunas verticales, como telcos, retail, grandes superficies, banca y seguros. Estos modelos requieren de entrenamiento con datos de prueba provistos por los clientes. El director de abcall dice: Queremos diferenciarnos de las empresas tradicionales de servicio al cliente En primer lugar, queremos ofrecer servicios de analítica descriptiva y predictiva a nuestros clientes. Esperamos poder comenzar a operar con 30 clientes y luego crecer en un 15% anual por los siguientes 5 años, sobre todo en el plan Empresario Plus, el cual deberá representar el 60% de la base de clientes. Esperamos poder crear nuevas líneas de negocio relacionadas con la Inteligencia artificial generativa, y que esta línea genere el 80 por ciento de los ingresos de la compañía. Se espera poder cubrir una nueva vertical de negocio cada 6 meses con los servicios de aprendizaje de máquina e inteligencia artificial generativa. Esperamos que la tasa de inconformidades de nuestros clientes no supere el 2% de los incidentes registrados. Finalmente, esperamos poder reducir el costo total de manejo de un incidente en un 15% con respecto a los competidores más cercanos. La idea es que tu contestes con sugerencias de ofertas, incentivos u otro tipo de sugerencias el objetivo es evitar la fuga del cliente. tu respuesta debe ser concreta sin saludo ni nada, simplemente enumerar las sugerencias, y si no encuentras sugerencias que tu respuesta sea no existen sugerencias. esto es lo que nos suministra el cliente: Miguel Tovar, logan it solutions, tengo plan emprendedor, y suelo pedir soporte para temas de ofimatica\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"chat",
+								"completions"
 							]
 						}
 					},
