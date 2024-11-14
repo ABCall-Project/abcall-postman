@@ -15,6 +15,16 @@
 						{
 							"name": "invoices by customer id",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN_API}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -226,6 +236,79 @@
 											"key": "limit",
 											"value": "5"
 										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "signin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json();",
+											"pm.environment.set(\"TOKEN_API\", jsonData.token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"miguel@yopmail.com\",\n    \"password\":\"codesquad\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/auth/signin",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test protected path",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoibWlndWVsQHlvcG1haWwuY29tIiwiZXhwIjoxNzMxMjY3NjA3fQ.EjZoDpfczeiR2xXQF5nFfFDwmnp0MdRXcOeNuI_ndBM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ABCALL_BFF_BASE_URL}}/auth/prueba",
+									"host": [
+										"{{ABCALL_BFF_BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"prueba"
 									]
 								}
 							},
@@ -798,8 +881,27 @@
 				{
 					"name": "getUserByCredentials",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"miguel@yopmail.com\",\n    \"password\":\"codesquad\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ABCALL_AUTH_BASE_URL}}/users/getUserByCredentials",
+							"host": [
+								"{{ABCALL_AUTH_BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"getUserByCredentials"
+							]
+						}
 					},
 					"response": []
 				}
